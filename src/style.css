@@ -1,0 +1,55 @@
+.background-container {
+  height: 100vh;
+  background-color: antiquewhite;
+  /* padding: 20 */
+}
+
+.background-image {
+  background-image: url('./components/assets/elavator1.jpg');
+  /* Specify the background image */
+  background-size: cover;
+  /* Cover the entire container */
+  background-position: center;
+  /* Center the background image */
+  position: relative;
+  /* Position relative for absolute positioning of text */
+  width: 100%;
+  /* Ensure the image covers the entire grid */
+  height: 100%;
+  /* Ensure the image covers the entire grid */
+  filter: brightness(40%) blur(1px);
+}
+
+.text-on-image {
+  position: absolute;
+  /* Position text relative to the container */
+  top: 30%;
+  /* Position text vertically centered */
+  /* left: 35%; */
+  /* Position text horizontally centered */
+  transform: translate(-50%, -50%);
+  /* Center the text */
+  color: white;
+  /* Set text color */
+  opacity: 0;
+  animation: fadeIn 6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateX(10%);
+    /* Start off-screen to the left */
+    opacity: 0;
+    /* Text starts with opacity 0 (invisible) */
+    transition: none;
+  }
+
+  to {
+    transform: translateX(-100%);
+    /* Slide in to the center */
+    opacity: 1;
+    /* Text ends with opacity 1 (fully visible) */
+    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    /* background-color: white; */
+  }
+}
