@@ -195,7 +195,7 @@ function NavBar() {
           </Typography>
         </Typography>
       </Grid> */}
-      <Grid className="background-container" container>
+      {/* <Grid className="background-container" container>
         <div className="background-image"></div>
         <div
           style={{
@@ -230,7 +230,7 @@ function NavBar() {
             hello nirav here
           </Typography>
         </div>
-      </Grid>
+      </Grid> */}
     </div>
   );
 }
